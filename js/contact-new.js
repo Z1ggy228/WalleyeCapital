@@ -126,7 +126,25 @@ $(document).on('css_ready', function() {
         $('.slider-btn.--prev-btn').on('click', function(){
             flkty.previous();
         });
-     }   
+
+        // FIX: Flickity locks in the viewport height at init — before the slide
+        // images have loaded — leaving this block collapsed (height 0). It only
+        // self-corrects on a resize event (e.g. when DevTools opens). Recalculate
+        // as soon as the images are actually loaded.
+        (function () {
+            var $imgs = $('.careers-slider img');
+            var pending = $imgs.length;
+            function done() { if (--pending <= 0) flkty.resize(); }
+            if (!pending) { flkty.resize(); }
+            else {
+                $imgs.each(function () {
+                    if (this.complete) { done(); }
+                    else { $(this).on('load error', done); }
+                });
+            }
+            $(window).on('load', function () { flkty.resize(); }); // safety net
+        })();
+     }
     });
     
 });

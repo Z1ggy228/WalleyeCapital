@@ -671,3 +671,12 @@ html.has-us-banner header { top: var(--us-banner-h, 48px) !important; }
   .confirm-btn { width: 100%; }
   #us-only-banner .us-only-inner { font-size: 0.82rem; padding: 0.6rem 2.5rem; }
 }
+
+/* ================= Perf fix: smooth scrolling over the .s4 infographic =================
+   The infographic is a large, complex static SVG (100+ gradient-filled paths). Without its
+   own compositor layer the browser re-rasterises it while scrolling, causing frame drops.
+   Promoting it to a GPU layer means it is rasterised once and scroll just moves the texture.
+   Purely a rendering hint — no visual or functional change. */
+.s4 .infographic {
+  transform: translateZ(0);   /* GPU layer: rasterise once, don't repaint on scroll */
+}

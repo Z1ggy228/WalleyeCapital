@@ -318,7 +318,7 @@ header {
         display: block;
         width: 317px;
         height: 83px;
-        background: url(img/svg/logo_walleye_white.svg) no-repeat center/contain;
+        background: url(img/logo-white.png) no-repeat left center/contain;
         position: relative;
         z-index: 10;
         transition: width .3s ease;
@@ -402,7 +402,7 @@ header.scroll:not(.active) {
 }
 
 header.scroll:not(.active), .no-hero header {
-    .logo {background: url(img/svg/logo_walleye_color.svg) no-repeat center/contain;}
+    .logo {background: url(img/logo-navy.png) no-repeat left center/contain;}
     nav {
         a, .login {color: $gray;}
         a::after {background: $blue;}
@@ -413,7 +413,7 @@ header.scroll:not(.active), .no-hero header {
 
 /****** HEADER ACTIVE ******/
 header.active, .no-hero header.active {
-    .logo {background: url(img/svg/logo_walleye_color.svg) no-repeat center/contain;}
+    .logo {background: url(img/logo-navy.png) no-repeat left center/contain;}
     nav {
         & {
             opacity: 1;
@@ -772,7 +772,7 @@ footer {
                     display: block;
                     width: 317px;
                     height: 83px;
-                    background: url(img/svg/logo_walleye_white.svg) no-repeat center/contain;
+                    background: url(img/logo-white.png) no-repeat left center/contain;
                     margin-bottom: 4rem;
                 }
                 p:first-of-type {color: #fff;}

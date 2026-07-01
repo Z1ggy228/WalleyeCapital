@@ -56,7 +56,7 @@
       var $b = $(
         '<div id="us-only-banner" role="alert">' +
           '<div class="us-only-inner">' +
-            '<span>Please note: Walleye Capital works exclusively with residents of the United States.</span>' +
+            '<span>Please note: Walleve Capital works exclusively with residents of the United States.</span>' +
             '<button type="button" class="us-only-close" aria-label="Dismiss">&times;</button>' +
           '</div>' +
         '</div>'
