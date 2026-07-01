@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <g id="icon_linkedin_white" transform="translate(-1065 -4733)">
+    <g id="btn" transform="translate(1065 4733)" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+      <circle cx="30" cy="30" r="30" stroke="none"/>
+      <circle cx="30" cy="30" r="29.5" fill="none"/>
+    </g>
+    <g id="in" transform="translate(1075.913 4744.333)">
+      <rect id="i-2" width="3.213" height="10.19" transform="translate(11.438 16.477)" fill="#fff"/>
+      <path id="n" d="M22.2,15.353a3.279,3.279,0,0,0-3.2,1.7V15.418H15.39c.051.848,0,10.19,0,10.19h3.6V20.1a2.284,2.284,0,0,1,.077-.835,1.837,1.837,0,0,1,1.748-1.246c1.259,0,1.838.925,1.838,2.326v5.269h3.675V19.941c0-3.148-1.838-4.588-4.138-4.588Z" transform="translate(1.226 1.046)" fill="#fff"/>
+      <path id="i-1" d="M12.98,11.671a1.777,1.777,0,0,0-.231,3.547h.231a1.777,1.777,0,1,0,.231-3.547Z" transform="translate(0 0)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

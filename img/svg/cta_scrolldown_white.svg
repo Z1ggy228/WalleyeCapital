@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="94.5" height="83" viewBox="0 0 94.5 83">
+  <g id="cta_scrolldown_white" transform="translate(-962 -645)">
+    <g id="btn" transform="translate(962 645)" fill="none" stroke="#fff" stroke-width="1" opacity="0.5">
+      <rect width="94.5" height="83" rx="15" stroke="none"/>
+      <rect x="0.5" y="0.5" width="93.5" height="82" rx="14.5" fill="none"/>
+    </g>
+    <g id="arrow" transform="translate(1002.147 680.5)">
+      <path id="angle" d="M12.353,6.753l-6,6-6-6" transform="translate(0.5 0.747)" fill="none" stroke="#fff" stroke-width="2"/>
+      <line id="line" y2="13" transform="translate(6.853 -0.5)" fill="none" stroke="#fff" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="543.787" height="576.287" viewBox="0 0 543.787 576.287">
+  <defs>
+    <filter id="Quant" x="19.958" y="0" width="346.893" height="346.893" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="12.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="approach_graph_quant" transform="matrix(0.966, 0.259, -0.259, 0.966, -105.059, -1945.154)">
+    <path id="shape" d="M444,222c0,122.608-99.392,222-222,222S0,344.608,0,222,99.392,0,222,0,444,99.392,444,222" transform="translate(724.333 1853.333)" fill="#fff" opacity="0"/>
+    <path id="Macro" d="M25,150c0,113.21,91.773,204.983,204.983,204.983V150Z" transform="translate(716.35 1925.333)" fill="#399fef"/>
+    <path id="Fundamental" d="M150,75V249.042H324.042A174.043,174.043,0,0,0,150,75" transform="translate(796.333 1826.291)" fill="#2a7dcb"/>
+    <path id="Volatility" d="M150,339.513c104.665,0,189.513-84.847,189.513-189.513H150Z" transform="translate(796.333 1925.333)" fill="#1351bc"/>
+    <g transform="matrix(0.97, -0.26, 0.26, 0.97, 604.92, 1851.68)" filter="url(#Quant)">
+      <path id="Quant-2" data-name="Quant" d="M272,50C149.394,50,50,149.392,50,272H272Z" transform="matrix(0.97, 0.26, -0.26, 0.97, 79.56, -28.74)" fill="#1a5ca6"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.846" height="80.846" viewBox="0 0 80.846 80.846">
+  <g id="icon_people" transform="translate(-527.788 -3123)">
+    <circle id="circle" cx="40.423" cy="40.423" r="40.423" transform="translate(527.788 3123)" fill="#13294a" opacity="0.5"/>
+    <g id="icon_people-2" data-name="icon_people" transform="translate(549.288 3151.5)">
+      <path id="Path_148" data-name="Path 148" d="M10.12,22.437V15.251a3.261,3.261,0,0,1,3.251-3.264H24.61a3.255,3.255,0,0,1,3.264,3.264v7.186" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_149" data-name="Path 149" d="M.5,22.437V16.475a2.819,2.819,0,0,1,2.816-2.816H7.237" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_150" data-name="Path 150" d="M19,8.32h0a3.4,3.4,0,0,1-3.4-3.4V3.9a3.4,3.4,0,1,1,6.8,0V4.919A3.4,3.4,0,0,1,19,8.32Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_151" data-name="Path 151" d="M8.6,9.351h0A2.958,2.958,0,0,1,5.642,6.393V5.507a2.958,2.958,0,0,1,5.917,0v.886A2.959,2.959,0,0,1,8.6,9.351Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_152" data-name="Path 152" d="M30.576,13.658H34.8a2.82,2.82,0,0,1,2.817,2.816v5.962" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_153" data-name="Path 153" d="M29.518,9.351h0a2.958,2.958,0,0,0,2.958-2.958V5.507a2.958,2.958,0,0,0-5.916,0v.886A2.958,2.958,0,0,0,29.518,9.351Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

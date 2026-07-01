@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80.846" height="80.846" viewBox="0 0 80.846 80.846">
+  <g id="icon_ascend" transform="translate(-989.788 -3585)">
+    <circle id="circle" cx="40.423" cy="40.423" r="40.423" transform="translate(989.788 3585)" fill="#13294a" opacity="0.5"/>
+    <g id="icon_ascend-2" data-name="icon_ascend" transform="translate(1011.37 3606.115)">
+      <path id="Path_172" data-name="Path 172" d="M.418,34.415,11.818,17a.291.291,0,0,1,.463,0L26.44,38.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_173" data-name="Path 173" d="M20.881,30.12l9.455-14.963,7.806,10.651" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_174" data-name="Path 174" d="M.418,15.155,11.254.886l8.35,13.67,1.144,1.874L25.125,23.6" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_175" data-name="Path 175" d="M7.378,23.786l2.4,2.558,2.89-1.8,2.6,2.267,2.6-1.293" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_176" data-name="Path 176" d="M26.16,21.93l2.867,1.446,2.042-2.042,4.542,1.021" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_177" data-name="Path 177" d="M6.818,6.728,9.079,9.246l1.965-2.035,1.872,2.081,2.353-1.834" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_3" data-name="Line 3" y1="14.271" transform="translate(30.34 0.885)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_178" data-name="Path 178" d="M30.34,2.988H23.581l2.025,2.889L23.581,8.808H30.34" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
