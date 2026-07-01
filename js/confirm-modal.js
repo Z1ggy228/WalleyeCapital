@@ -1,9 +1,15 @@
 /* ============================================================
    Custom confirmation modal + "US residents only" banner.
    ADDED to this local copy (does NOT exist on the donor site).
-   Styled to match the site's existing popups / chrome.
+   The user's choice is remembered in localStorage, so the modal
+   is only shown once (not on every page navigation).
    ============================================================ */
 (function () {
+  var KEY = 'walleyeResidentConfirm';        // stored value: "yes" | "no"
+
+  function getChoice() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function setChoice(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
   function init($) {
     if ($('#confirm-popup').length) return;
     var $html = $('html');
@@ -32,20 +38,18 @@
       $html.removeClass('confirm-noscroll');
     }
 
-    // expose for manual (re)triggering / testing from the console
-    window.showConfirmModal = open;
-    window.hideConfirmModal = close;
+    // Yes -> remember + close.  No -> remember + close + banner.
+    $(document).on('click', '#confirm-popup .confirm-yes', function (e) {
+      e.preventDefault(); setChoice('yes'); close();
+    });
+    $(document).on('click', '#confirm-popup .confirm-no', function (e) {
+      e.preventDefault(); setChoice('no'); close(); showBanner();
+    });
 
-    // Yes -> just close.  No -> close + show the top banner.
-    $(document).on('click', '#confirm-popup .confirm-yes', function (e) { e.preventDefault(); close(); });
-    $(document).on('click', '#confirm-popup .confirm-no',  function (e) { e.preventDefault(); close(); showBanner(); });
-
-    // ---- "US residents only" banner (shown when the user answers "No") ----
+    // ---- "US residents only" banner (for users who answered "No") ----
     function setBannerOffset() {
       var $b = $('#us-only-banner');
-      if ($b.length) {
-        document.documentElement.style.setProperty('--us-banner-h', $b.outerHeight() + 'px');
-      }
+      if ($b.length) document.documentElement.style.setProperty('--us-banner-h', $b.outerHeight() + 'px');
     }
     function showBanner() {
       if ($('#us-only-banner').length) return;
@@ -67,12 +71,22 @@
       });
     }
     $(window).on('resize', setBannerOffset);
-    window.showUsBanner = showBanner;                // exposed for testing
 
-    // --- Trigger: show on every page load ---
-    // To show it only ONCE per browser session instead, replace the line below with:
-    //   if (!sessionStorage.getItem('walleyeConfirm')) { sessionStorage.setItem('walleyeConfirm','1'); setTimeout(open, 400); }
-    setTimeout(open, 400);
+    // ---- helpers exposed for testing from the console ----
+    window.showConfirmModal = open;
+    window.hideConfirmModal = close;
+    window.showUsBanner = showBanner;
+    window.resetConfirmModal = function () { try { localStorage.removeItem(KEY); } catch (e) {} location.reload(); };
+
+    // ---- decide what to do based on the remembered choice ----
+    var choice = getChoice();
+    if (choice === 'yes') {
+      /* already confirmed — show nothing */
+    } else if (choice === 'no') {
+      showBanner();                                  // remembered non-resident — keep the banner
+    } else {
+      setTimeout(open, 400);                         // not answered yet — ask
+    }
   }
 
   (function ready(cb) {

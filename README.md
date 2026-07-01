@@ -93,15 +93,17 @@ the site's existing modals (white card, dimmed overlay, Roboto Slab heading, bra
 Self-contained: the script injects its own markup + overlay into every page (one `<script>`
 include per page, no other markup hand-edited).
 
-- **Trigger:** shows on every page load (≈0.4s after load).
+- **Asked once, remembered:** the choice is stored in `localStorage` (`walleyeResidentConfirm` =
+  `yes` / `no`), so the modal is **not** re-shown on every page navigation. After **Yes** it never
+  appears again; after **No** the banner keeps showing (modal does not). Works over `http://` and
+  `file://`.
 - **No close "X":** it can only be dismissed by clicking **Yes** or **No**.
 - **Page scroll is locked** while the modal is open (restored on close).
-- **Yes** → just closes. **No** → closes and shows a brand-blue **banner** fixed at the top —
-  *"Please note: Walleye Capital works exclusively with residents of the United States."* — which
-  pushes the site header down and can be dismissed with its own ×.
-- **Show once per session instead:** see the commented one-liner near the bottom of
-  `js/confirm-modal.js`.
-- **Test from the console:** `showConfirmModal()` / `hideConfirmModal()` / `showUsBanner()`.
+- **Yes** → remembers + closes. **No** → remembers + closes + shows a brand-blue **banner** fixed at
+  the top — *"Please note: Walleye Capital works exclusively with residents of the United States."* —
+  which pushes the site header down and can be dismissed with its own ×.
+- **Reset / test from the console:** `resetConfirmModal()` (clears the choice and reloads),
+  `showConfirmModal()` / `hideConfirmModal()` / `showUsBanner()`.
 
 ## Verified (headless Chromium, all 20 pages)
 
