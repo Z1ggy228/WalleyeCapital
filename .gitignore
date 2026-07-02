@@ -1,3 +1,6 @@
 smtp.env
 contact_messages/
 _raw/
+node_modules/
+__pycache__/
+*.pyc

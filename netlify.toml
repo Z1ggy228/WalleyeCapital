@@ -1,0 +1,15 @@
+# Netlify config for the Walleve Capital site.
+# Static files are at the repo root; the contact form is handled by a
+# serverless function that e-mails support@wallevegroup.co via SMTP.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# The site posts to /api/contact — rewrite that to the function
+# (status = 200 => transparent proxy, the browser URL stays /api/contact).
+[[redirects]]
+  from = "/api/contact"
+  to = "/.netlify/functions/contact"
+  status = 200
+  force = true

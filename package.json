@@ -1,0 +1,9 @@
+{
+  "name": "walleve-capital-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Walleve Capital site — Netlify functions (contact form mailer)",
+  "dependencies": {
+    "nodemailer": "^6.10.1"
+  }
+}
