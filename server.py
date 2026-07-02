@@ -124,6 +124,10 @@ class Handler(SimpleHTTPRequestHandler):
             length = int(self.headers.get("Content-Length", 0) or 0)
             raw = self.rfile.read(length).decode("utf-8", "replace")
             fields = parse_qs(raw, keep_blank_values=True)
+            # enforce English (ASCII) input — mirrors the front-end filter
+            for k in ("name", "company", "phone", "email", "message"):
+                if any(ord(c) > 127 for c in fields.get(k, [""])[0]):
+                    self._json(400, {"ok": False, "message": "Please use English (Latin) characters only."}); return
             msg, body = build_email(fields)
             if SMTP_HOST:
                 try:

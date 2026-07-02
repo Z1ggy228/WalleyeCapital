@@ -36,7 +36,8 @@ Example (PowerShell): `$env:SMTP_HOST="smtp.gmail.com"; $env:SMTP_USER="..."; $e
 - **Careers** page removed (and its nav links / campus-faq sub-page).
 - **Investor login** links directly to `https://terminal.wallevecapital.com` (no popup modal).
 - **Podcasts & Publications** section removed.
-- **Contact** page: only New York, London, Dubai offices; form e-mails support@wallevegroup.co.
+- **Contact** page: only New York, London, Dubai offices; form e-mails support@wallevegroup.co;
+  form fields accept **English (Latin/ASCII) input only** (filtered live client-side + enforced server-side).
 - All e-mail addresses → **support@wallevegroup.co**.
 - US-residents confirmation modal on entry (see below).
 

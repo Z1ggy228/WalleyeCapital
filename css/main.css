@@ -680,3 +680,17 @@ html.has-us-banner header { top: var(--us-banner-h, 48px) !important; }
 .s4 .infographic {
   transform: translateZ(0);   /* GPU layer: rasterise once, don't repaint on scroll */
 }
+
+/* ================= English-only contact-form hint (ADDED) ================= */
+.contact-form .en-only-hint {
+  margin: 0.5rem 0 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  color: #c0392b;
+  opacity: 0;
+  transition: opacity .2s ease;
+  pointer-events: none;
+}
+.contact-form .en-only-hint.show { opacity: 1; }
