@@ -83,27 +83,29 @@ $(document).on("css_ready",function(a) {
             ]
         });
 
-        var flkty = new Flickity('.publications-wrapper', {
-            cellAlign: 'left',
-            contain: true,
-            draggable: false,
-            groupCells: true,
-            prevNextButtons: false,
-            pageDots: false
-        });
+        if ($('.publications-wrapper').length) {
+            var flkty = new Flickity('.publications-wrapper', {
+                cellAlign: 'left',
+                contain: true,
+                draggable: false,
+                groupCells: true,
+                prevNextButtons: false,
+                pageDots: false
+            });
 
-        if ($(window).width() <= 768 ){
-            flkty.destroy();
-        } else {
-            flkty.reloadCells();
+            if ($(window).width() <= 768 ){
+                flkty.destroy();
+            } else {
+                flkty.reloadCells();
+            }
+
+            $('.slider-btn.--next-btn').on('click', function(){
+                flkty.next();
+            })
+
+            $('.slider-btn.--prev-btn').on('click', function(){
+                flkty.previous();
+            })
         }
-
-        $('.slider-btn.--next-btn').on('click', function(){
-            flkty.next();
-        })
-
-        $('.slider-btn.--prev-btn').on('click', function(){
-            flkty.previous();
-        })
     });
 });

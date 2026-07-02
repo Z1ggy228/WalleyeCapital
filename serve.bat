@@ -1,5 +1,5 @@
 @echo off
-REM Double-click this to run the Walleye local copy properly (recommended).
+REM Runs the Walleve local site + contact-form mail backend.
 cd /d "%~dp0"
 start "" "http://localhost:8000/index.html"
-python -m http.server 8000
+python server.py

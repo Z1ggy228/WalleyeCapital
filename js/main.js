@@ -473,7 +473,7 @@ header.active, .no-hero header.active {
     .s1 {
         & {
             height: 100vh;
-            background: url(img/home_hero_parallax.jpg) no-repeat center/cover fixed;
+            background: url(img/hero-bg.jpg) no-repeat center/cover fixed;
             position: relative;
         }
         .container {
@@ -4199,9 +4199,6 @@ $(document).on("css_ready",function(a) {
 
 //Pop-up
 $(document).ready(function() {
-    $(".login").on("click", function() {
-        $("#login-popup, .overlay").fadeIn("slow");
-    });
     $(".close-login, .overlay").on("click", function() {
         $("#login-popup, .overlay, #careers-popup").hide();
     });
@@ -4245,7 +4242,7 @@ return a.length===2?a.pop().split(";").shift():null})("aiscookie")&&$.ajax({url:
 "input[name=editor_update]",function(){$.ajax({url:ce.path,type:"post",cache:!1,data:"SITE_ID="+(site_id?site_id:0)+"&PAGE="+(site_id&&epage?epage:location.pathname)+"&OTEXT="+encodeURIComponent($("textarea[name=etext1]").val())+"&NTEXT="+encodeURIComponent(tinymce.get("content_1").getContent())+"&TREE="+encodeURIComponent(ce.dtree)+"&THTML="+encodeURIComponent(ce.thtml)+"&PHTML="+encodeURIComponent(ce.phtml)+"&MHTML="+encodeURIComponent(ce.mhtml)+"&OET="+$("#editor").attr("oet"),success:function(a){tinymce.EditorManager.execCommand("mceRemoveEditor",
 !0,"content_1");$("#editor").remove();confirm(a)&&location.reload()}})});$("body").on("click","input[name=editor_preview]",function(){$(this).val()=="Preview"?($("#editor_edit1").html(tinymce.get("content_1").getContent()),$(this).val("Back to Original")):($("#editor_edit1").html(ce.thtml),$(this).val("Preview"))});$("body").on("click","input[name=editor_close]",function(){typeof tinymce!=="undefined"&&tinymce.EditorManager.execCommand("mceRemoveEditor",!0,"content_1");$("#editor").remove()});$("body").on("click",
 "#oclose",function(){typeof tinymce!=="undefined"&&tinymce.EditorManager.execCommand("mceRemoveEditor",!0,"content_1");$(this).parent().remove()});$("body").on("click","input[name=elogout]",function(){cookiePath=";Path=/";document.cookie="aiscookie=0"+cookiePath;location.reload(!1)});$(document).keydown(function(a){a.which==81&&(ce.kp=!0)}).keyup(function(a){a.which==81&&(ce.kp=!1)});$("body").on("click","#ce-highlight",function(){$(this).toggleClass("sel");$("ce").toggleClass("sel")});$("body").on("mouseenter",
-"#ce-highlight",function(){$("body").append("<div id='ce-msg'><div id='arrow'></div><div class='body'><span>For Administrators Only</span><br>As an administrator of this website, this widget will assist you with using the Onscreen Editor Tool. By clicking this button, containers of the content will highlight with a green dotted border allowing for you to edit larger chunks of the page. To grab the larger chunks, while pressing &ldquo;ALT Q&rdquo;, click on the top green border. Note that not all pages have this feature enabled. If you have any question please email webteam@ovistechnologies.com.<br>***Normal users do not see this button***</div><div class='mbottom'></div></div>");
+"#ce-highlight",function(){$("body").append("<div id='ce-msg'><div id='arrow'></div><div class='body'><span>For Administrators Only</span><br>As an administrator of this website, this widget will assist you with using the Onscreen Editor Tool. By clicking this button, containers of the content will highlight with a green dotted border allowing for you to edit larger chunks of the page. To grab the larger chunks, while pressing &ldquo;ALT Q&rdquo;, click on the top green border. Note that not all pages have this feature enabled. If you have any question please email support@wallevegroup.co.<br>***Normal users do not see this button***</div><div class='mbottom'></div></div>");
 $(this).mouseleave(function(){$("#ce-msg").remove()})})})})();
 
 

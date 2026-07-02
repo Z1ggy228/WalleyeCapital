@@ -6,16 +6,39 @@ local — no calls to any external domain.
 
 ## Run
 
-Either way works — no server strictly required:
+- **Recommended — `python server.py`** (or double-click **`serve.bat`** / run `./serve.sh`), then
+  open http://localhost:8000/ . This serves the site **and** runs the contact-form mail backend.
+- Browsing only (contact form won't send): double-click `index.html` (`file://`) or
+  `python -m http.server 8000`.
 
-- **Just double-click `index.html`** (opens as `file://`). Works directly.
-- **Or serve it** (production-like): double-click **`serve.bat`** (Windows) / run `./serve.sh`,
-  or `python -m http.server 8000` in this folder, then open http://localhost:8000/index.html .
+> The site's main stylesheet is compiled in the browser by the CMS and embedded in `js/main.js`
+> (no `XMLHttpRequest`), so plain `file://` double-click still renders correctly.
 
-> Note: the site's main stylesheet is compiled in the browser by the CMS. It is embedded in
-> `js/main.js`, so it loads without any `XMLHttpRequest` — that's why plain `file://` double-click
-> works. (An earlier version loaded it via XHR, which browsers block on `file://` → the page looked
-> unstyled. That is fixed.)
+## Contact form → e-mail (SMTP)
+
+`server.py` handles `POST /api/contact` and e-mails submissions to **support@wallevegroup.co**.
+Set these environment variables to enable real delivery (otherwise it runs in **demo mode**:
+submissions are saved to `./contact_messages/` and the form still confirms success):
+
+```
+SMTP_HOST=smtp.yourprovider.com   SMTP_PORT=587
+SMTP_USER=you@yourprovider.com    SMTP_PASS=your-app-password
+SMTP_FROM=you@yourprovider.com    # optional, defaults to SMTP_USER
+SMTP_SSL=1                         # optional, for implicit-SSL (port 465)
+MAIL_TO=support@wallevegroup.co    # optional, this is the default
+```
+Example (PowerShell): `$env:SMTP_HOST="smtp.gmail.com"; $env:SMTP_USER="..."; $env:SMTP_PASS="..."; python server.py`
+
+## Local customizations (differ from the donor site)
+
+- Brand renamed to **Walleve** everywhere (text + logo + fish icon).
+- Home hero background uses `img/hero-bg.jpg`.
+- **Careers** page removed (and its nav links / campus-faq sub-page).
+- **Investor login** links directly to `https://terminal.wallevecapital.com` (no popup modal).
+- **Podcasts & Publications** section removed.
+- **Contact** page: only New York, London, Dubai offices; form e-mails support@wallevegroup.co.
+- All e-mail addresses → **support@wallevegroup.co**.
+- US-residents confirmation modal on entry (see below).
 
 ## Structure
 
