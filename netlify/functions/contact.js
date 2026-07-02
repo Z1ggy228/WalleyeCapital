@@ -85,11 +85,20 @@ exports.handler = async (event) => {
     }
   }
 
-  // TEMP DIAGNOSTICS: expose the SMTP error so it can be diagnosed remotely.
+  // TEMP DIAGNOSTICS: expose the SMTP error + non-secret config so it can be
+  // diagnosed remotely. (Password itself is NOT exposed — only its length.)
   return json(500, {
     ok: false,
     message: "Sorry, we couldn't send your message. Please email support@wallevegroup.co directly.",
     error: String(lastErr && (lastErr.message || lastErr)),
     code: lastErr && lastErr.code,
+    cfg: {
+      host: process.env.SMTP_HOST || null,
+      port: process.env.SMTP_PORT || null,
+      user: process.env.SMTP_USER || null,
+      from: process.env.SMTP_FROM || null,
+      passLen: (process.env.SMTP_PASS || "").length,       // expected: 15
+      passHasSpace: /\s/.test(process.env.SMTP_PASS || ""),  // expected: false
+    },
   });
 };
