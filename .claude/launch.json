@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "zcd-auto-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8123", "--directory", "D:/Downloads/zcd-auto"],
+      "port": 8123
+    }
+  ]
+}
